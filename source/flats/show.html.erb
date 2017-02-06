@@ -1,0 +1,48 @@
+<% flat = data.flats[owner] %>
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url(<%= image_path flat.card_picture %>); height: 50vh; background-position: center;">
+</div>
+<div class="header-flat">
+  <div class="summary-flat">
+    <div class="user-profile">
+      <%= image_tag flat.owner_picture, class: "avatar" %>
+      <p class="user-name"><%= flat.owner_name %></p>
+    </div>
+    <div class="basic-info">
+      <h2><%= flat.summary %></h2>
+      <p><%= flat.city %></p>
+      <div class="ratings">
+        <% flat.rating.times do %>
+          <li><i class="fa fa-star" style="color: #ffb400"></i></li>
+        <% end %>
+        <% (5 - flat.rating).times do %>
+          <li><i class="fa fa-star" style="color: #cacccd"></i></li>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <form action="#">
+    <h4>Book this flat</h4>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="checkin" id="checkin">
+        <input type="text" class="form-control" placeholder="checkout">
+      </div>
+      <div class="form-group">
+        <select name="" id="guests" class="form-control">
+          <% count = 1 %>
+          <% guest_word = "guest" %>
+          <% flat.max_guests.times do %>
+            <% guest_word = "guests" if count > 1 %>
+            <option value="#{count}"><%= count %> <%= guest_word %></option>
+            <% count += 1 %>
+          <% end %>
+        </select>
+      </div>
+      <input type="submit" class="btn btn-danger" value="Book it" style="width: 100%">
+  </form>
+
+
+
+</div>
+
+

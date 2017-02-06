@@ -1,0 +1,41 @@
+seb:
+  owner_name: Sebastien
+  card_picture: card-paris.jpg
+  owner_picture: seb.png
+  name: Seb's home
+  summary: Charming room in Montmartre
+  city: Paris
+  wifi: true
+  max_guests: 2
+  rating: 4
+  bathrooms: 1
+  bed_type: Real bed
+  number_of_beds: 1
+  type: Appartment
+romain:
+  owner_name: Romain
+  card_picture: card-london.jpeg
+  owner_picture: romain.png
+  name: Romain's home
+  summary: Nice flat in Piccadilly
+  city: London
+  wifi: false
+  max_guests: 3
+  rating: 5
+  bathrooms: 1
+  bed_type: Real bed
+  number_of_beds: 1
+  type: Appartment
+anne:
+  owner_name: Anne
+  card_picture: card-brussels.jpeg
+  owner_picture: anne.png
+  name: Anne's home
+  summary: Lovely house
+  city: Brussels
+  wifi: true
+  max_guests: 5
+  rating: 3
+  bathrooms: 2
+  number_of_beds: 2
+  type: House
